@@ -1,0 +1,96 @@
+
+<!-- <app-top-header></app-top-header> -->
+
+<app-sidebar></app-sidebar>
+<!-- Main Page-->
+<div class="main">
+  <h3>
+    <p class="text-center"><strong>Appointment Confirmation</strong></p>
+  </h3>
+  <hr />
+  <div>
+    <div class="con1">
+      <h3 class="hedder1">Patient</h3>
+      <!-- <img class="snap1" src="{{ path1 }}" alt="{{ alttext1 }}" /> -->
+      <img class="snap1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpC650bxBEk2zBAQj64HdZ770dTVGbO_lm9A&usqp=CAU" alt="{{ alttext1 }}" />
+      <!-- <span class="name">Premchand Mishra </span> -->
+      <span class="name">{{ confirmationData.patientName }}</span>
+      <br />
+      <!-- <br>
+                
+      <span class="name1">age 40 <br></span>
+      <span class="name1">blood group : o+ <br></span> -->
+
+<br />
+      <!-- <span class="name1">{{name1}}</span> -->
+    </div>
+    <div class="b0"></div>
+    <div class="b1 t1">
+      <p class="boxtext1">{{ type }}</p>
+    </div>
+    <div class="b1 t2">
+      <p class="boxtext1">{{ confirmationData.reason }}</p>
+    </div>
+    <div class="b1 t3">
+      
+        <p class="boxtext1">{{ PreviousPrescription }}</p>
+      
+    </div>
+    <div class="b2 t1">
+      <P class="boxtext"><small>Type</small></P>
+    </div>
+    <div class="b2 t2">
+      <P class="boxtext"><small>Reason</small></P>
+    </div>
+    <div class="b2 t3 t4">
+      <P class="boxtext"><small>Previous Prescription</small></P>
+    </div>
+  </div>
+  <div class="verticalline"></div>
+
+  <div>
+    <div class="con2">
+      <h3 class="hedder1 he2">Doctor</h3>
+      <div class="con3">
+        <!-- <img class="snap2" src="{{ path }}" alt="{{ alttext }}" /> -->
+         <img class="snap2" src="data:image/jpeg;base64,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" alt="{{ alttext }}" />
+        <p class="name1">
+          <strong>{{ nameofthedr }}</strong> <br />{{ specialist }}
+          <!-- <p class="name1">
+            <strong>Jhon Doe</strong> <br />Cancer Specialist
+          </p> -->
+        </p>
+      </div>
+      <br />
+    </div>
+    <div class="b0 t0"></div>
+    <div class="b1 t1 a1">
+      <p class="boxtext1">
+        Date: {{ confirmationData.appointmentDate | date: "shortDate" }} | Time:
+        {{ formatTime(confirmationData.appointmentTime) }}
+        <!-- Date: 31 jan | Time: 12:34 -->
+      </p>
+      <br />
+    </div>
+    <div class="b1 t2 a1">
+      <P class="boxtext1">{{ confirmationData.status }}</P>
+    </div>
+    <div class="b1 t3 a1">
+      <p class="boxtext1">{{ confirmationData.issue }}</p>
+    </div>
+    <div class="b2 t1 a1">
+      <P class="boxtext"><small>Time</small></P>
+    </div>
+    <div class="b2 t2 a1">
+      <P class="boxtext"><small>Status</small></P>
+    </div>
+    <div class="b2 t3 a1">
+      <P class="boxtext"><small>Issues</small></P>
+    </div>
+  </div>
+  <br><br>  <br><br>  <br><br>  <br><br>  <br><br>  
+  <!-- <img class="snap3" src="{{path2}}" alt="{{alttext2}}"> -->
+  <button class="button" ><a routerLink="/viewpatientsapp" style="color: white;">Go Back to Application</a>
+    
+  </button>
+</div>

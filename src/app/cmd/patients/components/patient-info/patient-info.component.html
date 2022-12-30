@@ -1,0 +1,160 @@
+
+<app-top-header></app-top-header>
+
+<app-sidebar></app-sidebar>
+
+<div class="whole">
+    <div class="row" > <div class="buttons"><a href="patient"><span><i class="fa fa-arrow-left" aria-hidden="true"></i></span></a></div>
+    <!-- *ngIf="patientInfo.patientid == patid.patientid"> -->
+        <div class ="col-sm-4" >
+            <img class="logo" src={{patientInfo.imageurl}}>
+        </div>
+        <div class="col-sm-4">
+
+            <p class="peter"><b>{{patientInfo.name}}</b></p><br>
+            <h3 class="tel">Tel :   {{patientInfo.phone}}</h3><br>
+<!-- 
+            <p class="material-icons blue-color 1"  > chat</p>
+          <p class="material-icons blue-color 1"> phone</p>
+            <p class="material-icons blue-color 3"   > video_call</p> -->
+            <div class="icon">
+                <a href="viewchats">
+                    <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="15"
+                  height="15"
+                  fill="currentColor"
+                  class="bi bi-chat-right-text-fill icons"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353V2zM3.5 3h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1 0-1zm0 2.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1 0-1zm0 2.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1z"
+                  />
+                </svg>
+                </a>
+                <hr class="h-line1" />
+                <a href="audiocall">
+                    <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="15"
+                  height="15"
+                  fill="currentColor"
+                  class="bi bi-telephone-fill icons"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"
+                  />
+                </svg>
+                </a>
+                <hr class="h-line1" />
+               <a href="videocall">
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="15"
+                height="15"
+                fill="currentColor"
+                class="bi bi-camera-video-fill icons"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2V5z"
+                />
+              </svg>
+               </a>
+              </div>
+      
+
+        </div>
+        <div class="col-sm-4 " >
+            <div class="box">
+                <span class="material-icons blue-color " > alarm_add</span>
+                <br>
+                <a href="bookAppointment">Book New</a>
+            </div>
+        </div>
+        <div class="row hea">
+            <div class="col-sm-3">
+                <div class="line">
+                    <h4 class="heading"><b>Info</b><br>
+                       <br> <b>36 </b>&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-mars"></i>&nbsp;&nbsp;&nbsp;   SEP12/1996</h4>
+                    <h3>{{patientInfo.DOB}}</h3>
+                </div>
+                <h3> {{patientInfo.height}} cm &nbsp;&nbsp;&nbsp;<i class="fa-solid fa-droplet"></i> &nbsp;{{patientInfo.bloodgroup}}</h3>
+
+
+            </div>
+            <div class="col-sm-3">
+                <div class="line">
+                    <h4 class="heading"><b> Allergies</b>  </h4>
+                    <h3>{{patientInfo.allergies}}</h3>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="line">
+                    <h4 class="heading"><b>Active Issues</b> </h4>
+                    <h3>{{patientInfo.activeissues}}</h3>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <h4 class="heading"><b>Medical Problems</b> </h4>
+                <h3> {{patientInfo.medicalproblems}}</h3>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+ <h2 class="demoText" style="color: #6d6297;">Appointments/Consultation</h2>
+ 
+ <div class="grid-container">
+    <div>
+        <app-symptoms ></app-symptoms>
+    </div>
+    <div >
+        <app-appointment-history></app-appointment-history>
+    </div>
+    <div  >
+    <app-prescription-history></app-prescription-history>
+</div> 
+</div>
+
+<!-- <div id="demo1">
+    <table>
+        <tr>
+            <td id="demoSymp">
+                <app-symptoms></app-symptoms>
+            </td>
+            <td > -->
+
+                <!-- <nav id="demoApp">
+                    <app-appointment-history></app-appointment-history>
+                </nav> -->
+
+
+                
+            <!-- </td> -->
+            <!-- <td id="demopre">
+                <app-prescription-history></app-prescription-history>
+            </td>
+        </tr>
+    </table>
+</div> -->
+
+
+<!-- <div class="sympt">
+    
+    <app-symptoms></app-symptoms>
+</div>
+
+<div class="appoin">
+    <app-appointment-history></app-appointment-history>
+</div>
+
+<div class="pres">
+    <app-prescription-history></app-prescription-history>
+</div>  -->
+

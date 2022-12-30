@@ -1,0 +1,34 @@
+{
+  "patient":[
+    {
+      "id":1,
+      "name":"Lara",
+      "age":26,
+      "patient":{
+        "gender":"F"
+      }
+     
+      
+    },
+    {
+      "id":2,
+      "name":"Selena",
+      "age":26,
+      "patient":{
+        "gender":"F"
+      }
+      
+      
+    },
+    {
+      "id":3,
+      "name":"Taylor",
+      "age":26,
+      "patient":{
+        "gender":"M"
+      }
+      
+      
+    }
+  ]
+}
